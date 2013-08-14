@@ -8,10 +8,17 @@ group :assets do
   gem 'sass-rails', "  ~> 3.2.0"
   gem 'uglifier'
   gem 'compass-rails'
-  gem 'ejs'
+  gem 'coffee-rails'
+  gem 'uglifier'
 end
 
 gem 'jquery-rails'
+
+
+gem 'ember-rails'
+gem 'ember-auth-rails'
+gem 'inherited_resources'
+gem 'active_model_serializers'
 
 gem 'devise', "~> 2.0.5"
 gem 'transitions', '0.0.9', :require => ["transitions", "active_record/transitions"]
