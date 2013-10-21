@@ -54,5 +54,5 @@ if ENV['TRAVIS'] == 'true'
     else
       gem 'sqlite3'
     end
-  end   
+  end
 end
