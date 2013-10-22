@@ -15,8 +15,6 @@ class UsersController < ApplicationController
     @user = User.find_or_create_by_email(params[:user][:email]) do |u|
       # Set to true if the user was not found
       u.was_created = true
-      u.name = params[:user][:name]
-      u.initials = params[:user][:initials]
     end
 
     if @user.new_record? && !@user.save

@@ -1,3 +1,2 @@
-Fulcrum.Router.map(function() {
+Fulcrum.Router.map ->
 
-});

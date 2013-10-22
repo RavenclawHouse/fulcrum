@@ -16,6 +16,7 @@ gem 'jquery-rails'
 
 
 gem 'ember-rails'
+gem 'ember-source', '1.0.0'
 gem 'ember-auth-rails'
 gem 'inherited_resources'
 gem 'active_model_serializers'

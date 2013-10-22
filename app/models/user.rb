@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
   # FIXME - DRY up, repeated in Story model
-  JSON_ATTRIBUTES = ["id", "name", "initials", "email"]
+  JSON_ATTRIBUTES = ["id", "email"]
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable, :lockable and :timeoutable
@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me,
-                  :name, :initials, :email_delivery, :email_acceptance, 
+                  :email_delivery, :email_acceptance,
                   :email_rejection, :locale
 
   # Flag used to identify if the user was found or created from find_or_create
@@ -19,9 +19,6 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :projects, :uniq => true
 
   before_validation :set_random_password_if_blank, :set_reset_password_token
-
-  validates :name, :presence => true
-  validates :initials, :presence => true
 
   def to_s
     "#{name} (#{initials}) <#{email}>"

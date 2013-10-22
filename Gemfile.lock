@@ -222,6 +222,7 @@ DEPENDENCIES
   devise (~> 2.0.5)
   ember-auth-rails
   ember-rails
+  ember-source (= 1.0.0)
   factory_girl_rails
   fastercsv (= 1.5.3)
   i18n-js
